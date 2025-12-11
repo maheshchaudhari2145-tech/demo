@@ -18,10 +18,10 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
 # Copy the packaged JAR from the builder stage
-COPY --from=builder /app/target/patient.jar patient.jar
+COPY --from=builder /app/target/customer.jar customer.jar
 
 # Expose the application port
 EXPOSE 5000
 
 # Command to run the application
-CMD ["java", "-jar", "patient.jar"]
+CMD ["java", "-jar", "customer.jar"]
